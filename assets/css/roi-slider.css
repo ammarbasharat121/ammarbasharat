@@ -1,0 +1,158 @@
+/* Scoped CSS for ROI Slider */
+
+/* Wrapper ID/Class to scope */
+.roi-slider-container {
+    position: relative;
+    width: 100%;
+    /* Ensure it doesn't overflow main page width improperly */
+    overflow: hidden;
+    height: 100vh;
+    /* Full screen height for the slider section */
+    background: #fff;
+    /* Ensure background matches */
+}
+
+/* Ensure box-sizing within this container */
+.roi-slider-container * {
+    box-sizing: border-box;
+}
+
+
+/* .slider equivalent */
+.roi-slider {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* .slider-wrapper equivalent */
+.roi-slider-wrapper {
+    margin: auto;
+    width: max-content;
+    padding-left: calc(50vw - 492.5px);
+    /* Centering first slide */
+    padding-right: 0 !important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    /* Standard gap */
+}
+
+/* Desktop override for gap */
+@media (min-width: 992px) {
+    .roi-slider-wrapper {
+        gap: 500px;
+    }
+}
+
+/* .slide equivalent */
+.roi-slide {
+    margin: auto;
+    width: 985px;
+    height: auto;
+}
+
+/* Image styling */
+.roi-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* .marker-wrapper equivalent */
+.roi-marker-wrapper {
+    position: absolute;
+    top: 0;
+    left: 7pc;
+    width: max-content;
+    height: 100%;
+    pointer-events: none;
+    /* Let clicks pass through */
+}
+
+.roi-marker {
+    position: relative;
+    width: 2px;
+    height: 100%;
+    background: #BF935B;
+}
+
+.roi-marker:after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 75px;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: 2px solid #BF935B;
+    border-radius: 100%;
+    z-index: 10;
+}
+
+/* .active-slide equivalent */
+.roi-active-slide {
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    font-family: "chocolatebox", sans-serif;
+    /* Ensure this font is available in index.html */
+    font-size: 22px;
+    font-weight: bold;
+    width: max-content;
+    color: #BF935B;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 380px) {
+    .roi-slider-wrapper {
+        padding-top: 15px;
+        padding-left: 0px;
+        gap: 5px;
+    }
+
+    .roi-slide {
+        width: 100%;
+    }
+
+    .roi-marker-wrapper {
+        left: 5pc;
+    }
+
+    .roi-marker:after {
+        top: 8pc;
+    }
+
+    .roi-active-slide {
+        top: 8.4pc;
+    }
+}
+
+@media (min-width: 381px) and (max-width: 991px) {
+    .roi-slider-wrapper {
+        padding-top: 15px;
+        padding-left: calc(50vw - 200px);
+        gap: 5px;
+    }
+
+    .roi-slide {
+        width: 400px;
+    }
+
+    .roi-marker-wrapper {
+        left: 5pc;
+    }
+
+    .roi-marker:after {
+        top: 8pc;
+    }
+
+    .roi-active-slide {
+        top: 8.4pc;
+    }
+}

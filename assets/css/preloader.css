@@ -1,0 +1,123 @@
+
+@font-face {
+    font-family: "QuinoaSC";
+    src: url("/assets/fonts/QuinoaSC-Semibold.ttf");
+}
+
+@font-face {
+    font-family: "QuinoaSC-medium";
+    src: url("/assets/fonts/QuinoaSC-Medium.ttf");
+}
+
+@font-face {
+    font-family: "QuinoaSC-bold";
+    src: url("/assets/fonts/QuinoaSC-Bold.ttf");
+}
+
+@font-face {
+    font-family: "helloParisBold";
+    src: url("/assets/fonts/HelloParisSerif-Medium.woff");
+}
+
+@font-face {
+    font-family: "helloParisLight";
+    src: url("/assets/fonts/HelloParisSerif-Regular.woff");
+}
+
+#preloader {
+    width: 100%;
+    height: 100vh;
+
+    
+
+    background-color: white;
+    /* background-image: url("../images/loader.001\ \(1\).png"); */
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5000;
+}
+
+.progress-bar {
+    width: 50%;
+    height: 4px;
+    background: grey;
+    overflow: hidden;
+    position: relative;
+    border-radius: 16px;
+}
+
+.progress-bar-inner {
+    width: 0;
+    height: 100%;
+    background: #BF935B;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.progress-para {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #976f3b;
+    font-family: "helloParisLight", sans-serif;
+    font-size: 4pc;
+    font-weight: bold;
+}
+
+
+
+
+#preloader2 {
+    width: 100%;
+    height: 100vh;
+
+    background-color: white;
+    /* background-image: url("../images/loader.001.png"); */
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    #preloader {
+        width: 100%;
+        height: 100vh;
+        /* border: 3px solid red; */
+
+    }
+
+    .title{
+        width: 100%;
+        scale: none!important;
+        transform: none!important;
+        
+    }
+
+
+}
